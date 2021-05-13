@@ -46,7 +46,9 @@ select COUNT(DISTINCT transactionhistory) AS transactionsbymonth
 from adventureworks.transactionhistory;
 
 #7.Which ( if any) of the sales people exceeded their sales quota this year and last year?
-
+select SalesPersonID, SalesQuota, SalesYTD, SalesLastYear from salesperson
+where SalesYTD>SalesQuota AND SalesLastYear > SalesQuota;
+                                                              
 #8.Do all products in the inventory have photos in the database and a text product descriptions?
 
 #9.What’s the average unit price of each product name on purchase orders which were not fully, but at least partially rejected?
